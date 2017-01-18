@@ -24,6 +24,7 @@ mkdir -p /tmp/php_upload/www
 wget --quiet --directory-prefix=/home/bitrix/www http://www.1c-bitrix.ru/download/scripts/bitrixsetup.php
 
 chown -R bitrix:bitrix /home/bitrix
+chown -R bitrix:bitrix /home/vagrant
 chown -R bitrix:bitrix /tmp/php_sessions
 chown -R bitrix:bitrix /tmp/php_upload
 
@@ -34,3 +35,15 @@ EnableSendfile Off
 echo '
 sendfile off;
 ' >> /etc/nginx/bx/conf/bitrix_general.conf
+
+# Включаем phar-файлы
+sudo cp /etc/php.d/20-phar.ini.disabled /etc/php.d/20-phar.ini
+sudo service httpd restart
+
+# Composer
+echo "Installing Composer"
+
+curl -sS https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/sbin/composer
+
+echo "Env install finished"
