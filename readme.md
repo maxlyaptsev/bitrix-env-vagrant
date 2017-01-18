@@ -15,6 +15,8 @@
 
 * Качается http://www.1c-bitrix.ru/download/scripts/bitrixsetup.php в /home/bitrix/www/bitrixsetup.php.
 
+* Устанавливается composer и console jedi.
+
 Web сервер на виртуальной машине работает на 80 порту.
 
 ## Настройка PhpStorm для работы
