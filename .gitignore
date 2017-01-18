@@ -1,0 +1,23 @@
+# IDE
+/nbproject/
+/.idea
+
+# Env
+.viminfo
+*.log
+composer.phar
+/.bash_history
+/.composer/
+/.mysql_history
+/.ssh/
+/var
+/logs
+vagrant/.vagrant/machines
+
+# Project
+/wiki
+/www/yandex*
+/www/*.html
+/www/bitrix/
+/www/upload/
+/vendor/
