@@ -25,6 +25,12 @@
 
   ],
   "extra": {
-    "bitrix-dir": "www/bitrix"
+    "bitrix-dir": "www/bitrix",
+    "installer-paths": {
+      "../bitrix/modules/{$name}/": ["type:bitrix-module"],
+      "./bitrix/components/{$name}/": ["type:bitrix-component"],
+      "./bitrix/templates/{$name}/": ["type:bitrix-theme"]
+    }   
+
   }
 }
